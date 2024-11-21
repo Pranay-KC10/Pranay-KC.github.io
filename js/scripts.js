@@ -51,4 +51,19 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Initialize carousel with auto-slide (3 seconds interval)
+    $('#hobbyCarousel').carousel({
+        interval: 3000 // Auto-slide every 3 seconds
+    });
+    
+    // Optional: Pause the carousel when the mouse hovers over the carousel
+    $('#hobbyCarousel').hover(
+        function() {
+            $(this).carousel('pause');
+        },
+        function() {
+            $(this).carousel('cycle');
+        }
+    );
+
 });

@@ -11143,7 +11143,7 @@ body {
 
 .signup-section {
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/unnamed.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11200,4 +11200,97 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+/* Add the new slideshow styles here at the bottom */
+.hobby-slideshow-section {
+  background-color: #000;  /* Change background color to black */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hobby-slideshow-section h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Set a fixed height for the carousel container to avoid stretching */
+#hobbyCarousel .carousel-inner {
+  max-height: 500px;  /* Set maximum height */
+  height: 500px; /* Force fixed height */
+  overflow: hidden;
+}
+
+/* Ensure images inside the carousel are responsive */
+#hobbyCarousel .carousel-item {
+  height: 100%; /* Make carousel item take full height */
+}
+
+#hobbyCarousel .carousel-item img {
+  width: 100%;
+  height: 100%; /* Ensures image fills the container */
+  object-fit: contain; /* Change to contain if you want to avoid zooming/cropping */
+  object-position: center; /* Keeps image centered */
+}
+
+/* Caption styling */
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);  /* Slight dark background for captions */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Controls (Previous/Next buttons) styling */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  z-index: 5;
+}
+
+/* Optional: Styling for indicators (dot navigation) */
+.carousel-indicators button {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-indicators .active {
+  background-color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hobby-slideshow-section h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  /* Make carousel images more responsive on smaller screens */
+  #hobbyCarousel .carousel-item img {
+    height: auto; /* Allow height to adjust proportionally */
+  }
 }
